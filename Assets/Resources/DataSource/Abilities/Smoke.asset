@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb1d02914e74816b726bd945d199cbe, type: 3}
+  m_Name: Smoke
+  m_EditorClassIdentifier: 
+  itemConfig: {fileID: 11400000, guid: a38a115ed38097842aab7c29a7db4256, type: 2}
+  view: {fileID: 6872114268063275222, guid: 9868e25cb9fb08445b806a111d10d25f, type: 3}
+  type: 2
+  value: 200

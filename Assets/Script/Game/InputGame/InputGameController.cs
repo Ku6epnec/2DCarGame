@@ -1,0 +1,36 @@
+﻿using Profile;
+using Tools;
+using UnityEngine;
+
+
+namespace Game.InputLogic
+{
+    public class InputGameController : BaseController
+    {
+        #region Fields
+
+        private readonly ResourcePath _viewPath = new ResourcePath {PathResource = "Prefabs/endlessMove"};
+        private BaseInputView _view;
+
+        #endregion
+
+        #region OtherMethods
+
+        public InputGameController(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, Car car)
+        {
+            _view = LoadView();
+            _view.Init(leftMove, rightMove, car.Speed);
+        }
+
+
+            private BaseInputView LoadView()
+        {
+            GameObject objView = Object.Instantiate(ResourceLoader.LoadPrefab(_viewPath));
+            AddGameObjects(objView);
+            return objView.GetComponent<BaseInputView>();
+        }
+
+        #endregion
+    }
+}
+
